@@ -38,12 +38,17 @@ if (configs[`config.${env}`]) {
   server = Object.assign(server, configs[`config.${env}`])
 }
 
-const client = server.page || {}
-delete server.page
+const client = server.client || {}
+delete server.client
 
 server.privateKey = `${+new Date()}_${parseInt(Math.random() * 10000)}`
 
 client.publicRuntimeConfig = server.public
+
+server = Object.assign(server, server.public)
+delete server.public
+
+client.serverRuntimeConfig = server
 client.distDir = '.build'
 
 module.exports = { server, client }
