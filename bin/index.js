@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
-const app = require('../app')
+const dev = require('./dev')
+const build = require('./build')
 
-app()
+if (process.argv.includes('build')) {
+  build()
+} else {
+  dev()
+}
