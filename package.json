@@ -1,8 +1,10 @@
 {
+  "bin": {
+    "kid": "bin/index.js"
+  },
   "name": "kidjs",
   "version": "1.0.0-alpha.0",
-  "description": "SSR Framework",
-  "main": "index.js",
+  "description": "Kidjs is a lightweight framework for server‑rendered",
   "scripts": {
     "test": "mocha -R spec --recursive"
   },
@@ -22,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/BoizZ/kidjs/issues"
   },
-  "homepage": "https://github.com/BoizZ/kidjs#readme",
+  "homepage": "https://kidjs.org",
   "dependencies": {
     "koa": "^2.5.1",
     "koa-router": "^7.4.0",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'
 
 const build = require('next/dist/build').default
