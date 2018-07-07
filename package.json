@@ -1,0 +1,26 @@
+{
+  "name": "kidjs",
+  "version": "1.0.0-alpha.0",
+  "description": "SSR Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoizZ/kidjs.git"
+  },
+  "keywords": [
+    "SSR",
+    "javascript",
+    "React",
+    "Koa",
+    "Node.js"
+  ],
+  "author": "Heleth <bon.hoo@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BoizZ/kidjs/issues"
+  },
+  "homepage": "https://github.com/BoizZ/kidjs#readme"
+}
