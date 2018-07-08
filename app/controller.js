@@ -1,8 +1,14 @@
 'use strict'
 
 const { resolve } = require('path')
-const moduleLoader = require('./utils/modulesLoader')
+const modulesLoader = require('./utils/modulesLoader')
 
 const dirPath = resolve(process.cwd(), './app/controller')
 
-module.exports = moduleLoader(dirPath)
+let controller = {}
+
+try {
+  controller = modulesLoader(dirPath)
+} catch (e) {}
+
+module.exports = controller
