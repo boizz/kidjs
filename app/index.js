@@ -34,7 +34,7 @@ module.exports = () => {
 
       server.use(async (ctx, next) => {
         ctx.res.statusCode = 200
-        ctx.config = config
+        ctx.config = config.server
         ctx.service = service
         await next()
       })
