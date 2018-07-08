@@ -40,7 +40,7 @@ export default IndexPage
 
 ### getInitialProps
 
-`getInitialProps` 方法只在顶层页面组件中使用。当初始化页面的时候，`getInitialProps` 只会在服务器端执行，而当通过 [Link](/components?id=Link) 组件或者使用 [命令路由](/components?id=Router) 来将页面导航到另外一个路由的时候，此方法就只会在客户端执行。
+`getInitialProps` 方法只在顶层页面组件中使用。当初始化页面的时候，`getInitialProps` 只会在服务器端执行，而当通过 [Link](/page?id=路由) 组件或者使用 [命令路由](/page?id=路由) 来将页面导航到另外一个路由的时候，此方法就只会在客户端执行。
 
 `getInitialProps` 接收的上下文对象包含以下属性：
 
