@@ -1,9 +1,9 @@
 'use strict'
 
-const path = require('path')
+const { resolve } = require('path')
 const modulesLoader = require('./utils/modulesLoader')
 
-const dirPath = path.resolve(__dirname, '../service')
+const dirPath = resolve(process.cwd(), './app/service')
 
 let service
 

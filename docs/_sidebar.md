@@ -9,4 +9,4 @@
   * [页面](page)
   * [配置](config)
 * **Alpha-3**
-  * [正在开发的功能](alpha_3)
+  * [正在开发的功能](planning)
