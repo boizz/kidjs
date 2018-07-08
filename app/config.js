@@ -2,6 +2,9 @@
 
 const { resolve } = require('path')
 const moduleLoader = require('./utils/modulesLoader')
+const withSass = require('@zeit/next-sass')
+const withLess = require('@zeit/next-less')
+const withCSS = require('@zeit/next-css')
 
 const dirPath = resolve(process.cwd(), './config')
 
@@ -38,7 +41,7 @@ if (configs[`config.${env}`]) {
   server = Object.assign(server, configs[`config.${env}`])
 }
 
-const client = server.client || {}
+let client = server.client || {}
 delete server.client
 
 server.privateKey = `${+new Date()}_${parseInt(Math.random() * 10000)}`
@@ -50,5 +53,7 @@ delete server.public
 
 client.serverRuntimeConfig = server
 client.distDir = '.build'
+
+client = withSass(withLess(withCSS(client)))
 
 module.exports = { server, client }
