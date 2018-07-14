@@ -6,7 +6,8 @@
   "version": "1.0.0-alpha.4",
   "description": "Kidjs is a lightweight framework for server‑rendered",
   "scripts": {
-    "test": "mocha -R spec --recursive"
+    "test": "mocha -R spec --recursive",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@zeit/next-less": "^0.3.0",
     "@zeit/next-sass": "^0.2.0",
     "koa": "^2.5.1",
+    "koa-body": "^4.0.4",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "less": "^3.5.3",
@@ -44,6 +46,10 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
-  }
+    "eslint-plugin-standard": "^3.1.0",
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
