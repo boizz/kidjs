@@ -5,7 +5,7 @@ const fs = require('fs')
 module.exports = (rootPath) => {
   const moduleList = {}
 
-  const readAllControllers = (fileList, moduleList, path) => {
+  const readAllModules = (fileList, moduleList, path) => {
     for (let fileName of fileList) {
       const ext = /\.js$/
       if (ext.test(fileName)) {
@@ -15,13 +15,13 @@ module.exports = (rootPath) => {
         moduleList[fileName] = {}
         const subPath = `${path}/${fileName}`
         const fileList = fs.readdirSync(subPath)
-        readAllControllers(fileList, moduleList[fileName], subPath)
+        readAllModules(fileList, moduleList[fileName], subPath)
       }
     }
   }
 
   const fileList = fs.readdirSync(rootPath)
-  readAllControllers(fileList, moduleList, rootPath)
+  readAllModules(fileList, moduleList, rootPath)
 
   return moduleList
 }
