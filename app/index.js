@@ -5,13 +5,15 @@ const next = require('next')
 const Router = require('koa-router')
 const bodyParser = require('koa-body')
 
+const env = require('./env')
 const config = require('./config')
 const controller = require('./controller')
 const service = require('./service')
 const appRender = require('./render')
 
 const port = config.server.port || 7214
-const dev = !['prod', 'production'].includes(process.env.NODE_ENV)
+const dev = env === 'local'
+
 const app = next({ dev, conf: config.client })
 const handle = app.getRequestHandler()
 
