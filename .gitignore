@@ -65,3 +65,7 @@ package-lock.json
 
 # .DS_Store
 .DS_Store
+
+# Just use Eslint
+.jshintignore
+.jshintrc

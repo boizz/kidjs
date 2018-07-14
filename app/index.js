@@ -3,6 +3,7 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
+const bodyParser = require('koa-body')
 
 const config = require('./config')
 const controller = require('./controller')
@@ -31,6 +32,8 @@ module.exports = () => {
       router.get('*', async ctx => {
         await handle(ctx.req, ctx.res)
       })
+
+      server.use(bodyParser({multipart: true}))
 
       server.use(async (ctx, next) => {
         ctx.res.statusCode = 200
