@@ -8,5 +8,5 @@
   * [Service](service)
   * [页面](page)
   * [配置](config)
-* **Alpha-5**
+* **Alpha-6**
   * [正在开发的功能](planning)
