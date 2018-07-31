@@ -4,6 +4,12 @@ let env = 'local'
 const ENV = process.env.KID_ENV || process.env.NODE_ENV
 
 switch (ENV) {
+  case undefined:
+  case null:
+  case '':
+  case 'local':
+    env = 'local'
+    break
   case 'production':
   case 'prod':
     env = 'prod'
@@ -20,7 +26,7 @@ switch (ENV) {
     env = 'unittest'
     break
   default:
-    env = 'local'
+    env = ENV.toLowerCase()
 }
 
 module.exports = env
