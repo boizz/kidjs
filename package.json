@@ -21,6 +21,7 @@
     "Koa",
     "Node.js"
   ],
+  "main": "modules.js",
   "author": "Heleth <bon.hoo@hotmail.com>",
   "license": "MIT",
   "bugs": {

@@ -78,7 +78,7 @@ export default () => <img src="/static/my-image.png" />
 框架集成了一个用于将元素追加到 `<head>` 中的组件。
 
 ``` js
-import Head from 'kidjs/head'
+import { Head } from 'kidjs'
 
 export default () =>
   <div>
@@ -93,7 +93,7 @@ export default () =>
 为了避免 `<head>` 下面的标签重复，可以为标签添加 `key` 属性：
 
 ``` js
-import Head from 'kidjs/head'
+import { Head } from 'kidjs'
 export default () => (
   <div>
     <Head>
@@ -175,7 +175,7 @@ export default Page
 
 ``` js
 // pages/index.js
-import Link from 'kidjs/link'
+import { Link } from 'kidjs'
 
 export default () =>
   <div>

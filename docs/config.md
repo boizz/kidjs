@@ -26,7 +26,8 @@ config
 
 ``` js
 // pages/index.js
-import getConfig from 'kidjs/config'
+import { config } from 'kidjs'
+const { getConfig } = config
 
 /**
  * 在页面中会根据页面渲染的环境读取到不同的配置
