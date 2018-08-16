@@ -3,7 +3,9 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
+const logger = require('koa-logger')
 const bodyParser = require('koa-body')
+const { resolve } = require('path')
 
 const env = require('./env')
 const config = require('./config')
@@ -25,7 +27,6 @@ module.exports = () => {
       const render = appRender(app, router)
 
       try {
-        const { resolve } = require('path')
         const routerPath = resolve(process.cwd(), './app/router')
         const serverRouter = require(routerPath)
         serverRouter({ router, controller, render })
@@ -44,7 +45,10 @@ module.exports = () => {
         await next()
       })
 
+      server.use(logger())
+
       server.use(router.routes())
+
       server.listen(port, () => {
         console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line
       })
