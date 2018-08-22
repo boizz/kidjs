@@ -52,3 +52,12 @@ kid-project
 | dev | 线上开发环境 |
 | test | 测试环境 |
 | prod | 生产环境 |
+
+### 自定义环境
+
+Kid.js 同时支持自定义运行环境及配置，使用环境变量 `KID_ENV` 及对应的配置文件即可。
+
+```
+$ KID_ENV=pre kid start
+=> config.pre.js
+```

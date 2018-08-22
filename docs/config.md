@@ -44,24 +44,48 @@ export default () => <div>
 </div>
 ```
 
-## 页面配置
+### 在服务端获取配置
 
-页面配置用于自定义页面缓存、CDN 等，统一放置在 `page` 字段下；
+``` js
+// app/controller/index.js
+module.exports = async (ctx) => {
+  const { port } = ctx.config
+  ctx.body = port
+}
+```
 
-### 自定义页面缓存
+## 服务配置
+
+服务配置用于管理页面缓存、自定义端口等；
+
+### 自定义端口
 
 ``` js
 module.exports = {
-  page: {
-    onDemandEntries: {
-      // 控制页面在内存 `buffer` 中缓存的时间，单位是 ms
-      maxInactiveAge: 25 * 1000,
-      // 同时保留的缓存页面数量
-      pagesBufferLength: 2,
-    }
+  port: 7707
+}
+```
+
+### 自定义缓存
+
+Kid.js 支持页面级缓存，在服务器中使用 [node-lru-cache](https://github.com/isaacs/node-lru-cache) 管理，默认缓存 100 个页面，缓存时间 1 分钟；
+
+你也可以在配置文件中自定义缓存，参数继承 [node-lru-cache](https://github.com/isaacs/node-lru-cache) Options。
+
+``` js
+module.exports = {
+  cache: {
+    max: 100,
+    maxAge: 1000 * 15
   }
 }
 ```
+
+页面缓存使用 `LRU-Cache` 管理
+
+## 页面配置
+
+页面配置用于自定义页面缓存、CDN 等，统一放置在 `page` 字段下；
 
 ### 自定义 CDN
 ``` js

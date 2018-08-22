@@ -1,5 +1,5 @@
 * **入门**
-  * [概述](over-view)
+  * [概述](overview)
   * [开始使用](quick-start)
 * **API**
   * [架构](framework)
@@ -8,5 +8,5 @@
   * [Service](service)
   * [页面](page)
   * [配置](config)
-* **Alpha-6**
+* **迭代**
   * [正在开发的功能](planning)

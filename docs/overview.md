@@ -1,6 +1,6 @@
 # 概述
 
-Kid.js 是一个轻量的服务端渲染框架，注重用户体验、高效构建。
+简单好用的 [Next.js](https://nextjs.org/) 自定义服务器。
 
 ## 为什么使用服务端渲染？
 
@@ -17,7 +17,7 @@ Kid.js 关注用户体验和性能，在技术选型上使用性能优异的框�
 
 ### 特性
 
-- 基于 [Next.js](https://nextjs.org/) 和 [Koa.js](https://koajs.com/) 开发，性能优异；
+- 基于 [Koa.js](https://koajs.com/) 开发，性能优异；
 - 高度组件化；
 - 配置化开发和部署；
 
@@ -56,8 +56,8 @@ $ open 127.0.0.1:7214
 
 ## LICENSE
 
-KIDJS 采用 [MIT](https://opensource.org/licenses/MIT) 开源许可。
+Kid.js 采用 [MIT](https://opensource.org/licenses/MIT) 开源许可。
 
-> KIDJS 关注企业和项目的版权风险，所有依赖的框架和库均采用 MIT 许可，并对依赖进行扫描。
+> Kid.js 关注企业和项目的版权风险，所有依赖的框架和库均采用 MIT 许可，并对依赖进行扫描。
 
 

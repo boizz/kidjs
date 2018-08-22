@@ -1,11 +1,11 @@
 'use strict'
 
+const { resolve } = require('path')
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
 const logger = require('koa-logger')
 const bodyParser = require('koa-body')
-const { resolve } = require('path')
 
 const env = require('./env')
 const config = require('./config')
@@ -50,7 +50,7 @@ module.exports = () => {
       server.use(router.routes())
 
       server.listen(port, () => {
-        console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line
+        console.log(`> Ready on http://127.0.0.1:${port}`) // eslint-disable-line
       })
     })
 }
