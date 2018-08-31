@@ -3,7 +3,7 @@
     "kid": "bin/index.js"
   },
   "name": "kidjs",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "Kidjs is a lightweight framework for server‑rendered",
   "scripts": {
     "test": "mocha -R spec --recursive",
