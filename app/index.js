@@ -42,6 +42,9 @@ module.exports = () => {
         ctx.res.statusCode = 200
         ctx.config = config.server
         ctx.service = service
+        ctx.render = async (path) => {
+          ctx.body = await app.render(ctx.req, ctx.res, path, ctx.query)
+        }
         await next()
       })
 
