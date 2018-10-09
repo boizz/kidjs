@@ -2,7 +2,6 @@
 
 const { resolve } = require('path')
 const withSass = require('@zeit/next-sass')
-const withLess = require('@zeit/next-less')
 const withCSS = require('@zeit/next-css')
 const moduleLoader = require('./utils/modulesLoader')
 const env = require('./env')
@@ -33,6 +32,6 @@ delete server.public
 client.serverRuntimeConfig = server
 client.distDir = '.build'
 
-client = withSass(withLess(withCSS(client)))
+client = withSass(withCSS(client))
 
 module.exports = { server, client }
