@@ -3,10 +3,10 @@
 ## 安装
 
 ``` bash
-$ npm i --save kidjs react react-dom
+$ npm i --save kidjs next react react-dom
 ```
 
-> Kid.js 支持 [React 16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) 及以上版本；   
+> Kid.js 支持 [Next 7](https://nextjs.org) 及以上版本；   
 > 支持在 [Node v7.6](https://nodejs.org/en/blog/release/v6.14.2/) 及以上版本中运行。
 
 ## 创建页面
