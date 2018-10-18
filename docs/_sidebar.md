@@ -6,7 +6,6 @@
   * [Router](router)
   * [Controller](controller)
   * [Service](service)
-  * [页面](page)
   * [配置](config)
 * **迭代**
   * [正在开发的功能](planning)
